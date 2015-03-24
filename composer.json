@@ -1,0 +1,27 @@
+{
+    "name": "caffeinated/plugins",
+    "description": "Laravel 5 Plugins",
+    "keywords": ["plugins", "plugin", "laravel", "caffeinated"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Shea Lewis",
+            "email": "shea.lewis89@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "~5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Caffeinated\\Plugins\\": "src/Caffeinated/Plugins/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    },
+    "minimum-stability": "dev"
+}
