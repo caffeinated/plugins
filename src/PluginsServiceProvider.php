@@ -31,7 +31,7 @@ class PluginsServiceProvider extends ServiceProvider
 	 */
 	protected function registerServices()
 	{
-		$this->app->bindShared('plugins', function($app) {
+		$this->app->singleton('plugins', function($app) {
 			$blade = $app['view']->getEngineResolver()->resolve('blade')->getCompiler();
 
 			return new Plugins($app, $blade);
