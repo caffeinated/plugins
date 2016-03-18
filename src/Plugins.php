@@ -62,12 +62,8 @@ class Plugins
 	 */
 	protected function registerTag($method)
 	{
-		$this->blade->extend(function($view, $compiler) use ($method) {
-			$pattern = $compiler->createMatcher($method);
-
-			$replace = '$1<?php echo '.$method.'$2; ?>';
-
-			return preg_replace($pattern, $replace, $view);
+		$this->blade->directive(strtolower($method), function($expression) use ($method) {
+			return '<?php echo '.$method.$expression.'; ?>';
 		});
 	}
 
