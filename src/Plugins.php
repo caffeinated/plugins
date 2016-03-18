@@ -62,7 +62,7 @@ class Plugins
 	 */
 	protected function registerTag($method)
 	{
-		$this->blade->directive(strtolower($method), function($expression) use ($method) {
+		$this->blade->directive($method, function($expression) use ($method) {
 			return '<?php echo '.$method.$expression.'; ?>';
 		});
 	}
