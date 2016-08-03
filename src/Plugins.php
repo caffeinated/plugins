@@ -1,6 +1,7 @@
 <?php
 namespace Caffeinated\Plugins;
 
+use Blade;
 use Closure;
 use Illuminate\Container\Container;
 use Illuminate\Support\Str;
@@ -63,7 +64,7 @@ class Plugins
 	protected function registerTag($method)
 	{
 		$this->blade->directive($method, function($expression) use ($method) {
-			return '<?php echo '.$method.$expression.'; ?>';
+			return "Plugin::$method$expression";
 		});
 	}
 
