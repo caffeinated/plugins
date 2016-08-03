@@ -55,5 +55,5 @@ Plugin::register('plugin_name', 'App\Plugins\YourPlugin');
 Now simply use it!
 
 ```php
-{{ plugin_name() }}  // Echo's "whatever you want" in this case
+{{ @plugin_name() }}  // Echo's "whatever you want" in this case
 ```
